@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 
 
 def predict_salary(list1):
-    df = pd.read_csv(r"F:\ML_projects\demo_deployment\salary.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/Dhananjaylodhi/Salary_prediction_demo/main/salary.csv")
     df.head()
 
     df['experience'].fillna(df['experience'].mean(), inplace=True)
