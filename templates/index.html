@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h1>Salary Prediction</h1>
+
+    <form action="/" method="POST">
+
+    <label for="experience" > Experience </label><br>
+    <input type="number" id = "experience" name = "experience"><br><br>
+
+    <label for = "test_score"> Test_score (out of 10) </label><br>
+    <input type = "number" id = "test_score" name = "test_score"><br><br>
+
+    <label for = "interview_score"> Interview_score (out of 10) </label><br>
+    <input type = "number" id = "interview_score" name = "interview_score"><br><br>
+
+    <input type="submit" value="Get Predictions">
+
+    {% if salary %}
+        <p>Predicted salary is: </p>
+        {{ salary }}
+    {% endif %}
+    </form>
+
+</body>
+</html>
